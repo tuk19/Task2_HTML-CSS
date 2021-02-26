@@ -1,0 +1,998 @@
+body {
+    margin: 0%;
+}
+
+/* ===================================================================================================================
+            header
+====================================================================================================================*/
+
+#page_top {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.header_logo_sp {
+    display: inline-block;
+    margin-top: 2px;
+    margin-left: 50px;
+}
+
+.header_logo_sp img {
+    width: 250px;
+}
+
+a {
+    color: #101010;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.right_float {
+    margin-right: 2vw;
+    float: right;
+}
+
+.left_float li {
+    text-align: center;
+    font-size: 0.8em;
+    float: left;
+    margin: 0 0.4em;
+}
+
+.bold {
+    font-family: "メイリオ";
+    font-weight: bold;
+}
+
+.font_orange {
+    color: #f79314;
+}
+
+.Counseling {
+    display: block;
+    color: white;
+    background-color: #f79314;
+    float:left;
+    font-weight: bold;
+    border-radius: 35em;
+    padding: 0.8em 2em;
+    white-space: nowrap;
+}
+
+.float_clear {
+    clear: both;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 80;
+    background-color: white;
+}
+
+.menu-btn span, .menu-btn span::before, .menu-btn span::after {
+    content:"";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: black;
+    position: absolute;
+}
+
+.menu-btn span::before {
+    bottom: 8px;
+}
+
+.menu-btn span::after {
+    top: 8px;
+}
+
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0)
+}
+
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg)
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+#menu-btn-check:checked ~ .menu-content {
+    left: 0%;
+}
+
+.menu-content {
+    width: 100%;
+    height: 90%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 100%;
+    z-index: 60;
+    background-color: rgba(50, 50, 50, 0.7);
+    transition: all 0.5s;
+}
+
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #f79314;
+    line-height: 25px;
+    text-decoration: none;
+    padding: 9px 15px 20px 0px;
+    position: relative;
+}
+
+.ham-menu {
+    color: white;
+    letter-spacing: 3px;
+}
+
+#ham_counseling {
+    display: block;
+    color: white;
+    background-color: #f79314;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 15px;
+    white-space: nowrap;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.hambergur-menu {
+    display: none;
+}
+
+@media screen and (max-width: 1080px) {
+    #page_top {
+        background-color: white;
+        position: fixed; /*固定する*/
+        width: 100%;
+        z-index: 10;
+    }
+    main {
+        padding-top: 70px;
+    }
+    .left_float li {
+        display: none;
+    }
+    .hambergur-menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #page_top {
+        padding: 15px 0;
+    }
+
+    .header_logo_sp img {
+        width: 170px;
+    }
+}
+
+/* ===================================================================================================================
+            Top
+====================================================================================================================*/
+.potepan {
+    background-repeat: no-repeat;
+    background-size: 1440px;
+    background-position: center;
+    background-color: #f79314;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.potepan.background-image {
+    background-image: url(img/course-hero-pc.png);
+}
+
+.top_comment.cource {
+    padding-left: 300px;
+}
+
+.top_comment {
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+    .potepan.background-image {
+        background-image: url(img/course-hero-sp.png);
+    }
+    .potepan {
+        background-size: contain;
+        padding-top: 10px;
+        padding-bottom: 50px;
+    }
+    .top_comment.cource {
+        padding-left: 0%;
+    }
+    .top_comment {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+/* ===================================================================================================================
+            About
+====================================================================================================================*/
+.about {
+    position: relative;
+    align-items: center;
+    padding: 0px 40px 1px 40px;
+    background-color: #fcfaf5;
+}
+
+.box_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.section_head {
+    text-align: center;
+    font-size: 50px;
+}
+
+.section_head span {
+    font-weight: bold;
+}
+
+.section_head::after {
+    content: "";
+    display: block;
+    width: 50px;
+    border-bottom: 5px solid #f79314;
+    word-break: break-all;
+    margin: 5px auto 15px auto;
+    box-sizing: border-box;   
+}
+
+.about_course {
+    width: 100%;
+}
+
+.about_text {
+    text-align: center;
+    line-height: 1.8em;
+}
+
+.about_text span {
+    display: block;
+}
+
+.emphasis_about {
+    margin: 1.5%;
+    text-align: center;
+}
+
+.emphasis_about span {
+    font-weight: bolder;
+    font-size: 1.3em;
+    background: linear-gradient(transparent 70%, #fff79d 70%, #e2e2dd);
+    word-wrap: break-word;
+}
+
+.point {
+    padding: 50px 20px 30px 20px; /*point-topを下げて、circleを上にあげる*/
+    border-radius: 15px;
+    background-color: white;
+    margin: 7% 2%;
+    text-align: center;
+}
+
+.adjust_circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; /*高さと幅は変わらないようにpx指定*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -90px auto 0 auto; /*margin-topをマイナスにして pointの上に飛び出る*/
+    background-color: white;
+}
+
+.point_icon {
+    width: 40px;
+    margin-top: -8px;
+}
+
+.point_icon img {
+    width: 100%;
+}
+
+#point_text { /*.about_cource p (＜ー消しました) が優先されるためid表記*/
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: -2%;
+    text-align: center;
+}
+
+.detail_points {
+    display: flex;
+    justify-content: space-between;
+    top: 100px;
+    padding: 0px; /* liの先頭にできた空白を削除*/
+}
+
+.detail_points li {
+    width: 33%;
+}
+
+.detail_head {
+    font-size: 15px;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    line-height: 1.8em;
+    text-align: center;
+    margin: 2% 5%;
+}
+
+.detail_points img {
+    width: 90%;
+    text-align: center;
+    margin: 1% 4% 0% 4%;
+}
+
+.detail_text {
+    font-size: 1.1em;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0;
+}
+
+.detail_text::before {
+    content:"";
+    background-image: url(img/icon-finger.png);
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    width: 22px;
+    height: 22px;
+    margin-top: -5px;
+    margin-right: 10px;
+}
+
+.flex_list {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 6% 2%;
+}
+
+.course_table {
+    width: auto;
+    height: 100%;
+    margin: 20px 10px 50px 10px
+
+}
+
+.table_title {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 10%;
+    font-size: 1.2em;
+    text-align: center;
+    color: white;
+    line-height: 2em;
+    background-color: #f79314;
+    padding: 5% 1%;
+}
+
+.table_title span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.box_white {
+    background-color: white;
+    margin-top: -15px;
+    padding-top: 15px;
+}
+
+.charge {
+    height: 5%;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.charge::before {
+    content: "¥ ";
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.charge::after {
+    content: " 税別";
+    font-size: 0.5em;
+}
+
+.detail_course {
+    height: 20%;
+    font-size: 1.1em;
+    line-height: 1.8em;
+    margin: auto 2%;
+    padding-bottom: 30px;
+    text-align: justify;
+}
+
+.table_data {
+    font-size: 1.1em;
+    height: 6%;
+    margin: 0px;
+    padding: 3%;
+    text-align: center;
+}
+.period {
+    font-weight: bold;
+}
+.period::first-letter {
+    font-size:2em;
+}
+
+.table_data span {
+    color: #f79314;
+}
+
+.table_data span::before {
+    content:" ";
+}
+
+.detail_link {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.table_data:nth-of-type(odd) {
+    background-color: white;
+}
+.table_data:nth-of-type(even) {
+    background-color: #fff8ea;
+}
+
+@media screen and (max-width: 767px) {
+    .section_head {
+        font-size: 26px;
+        text-align: center;
+    }
+    .section_head span {
+        display: block;
+    }
+    .about_text {
+        font-size: 15px;
+        text-align: left;
+    }
+    .emphasis_about span {
+        font-size: 16px;
+    }
+    .about_text span {
+        display: inline;
+    }
+    .detail_points {
+        flex-direction: column;
+    }
+    .detail_points li {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .flex_list {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* ===================================================================================================================
+            Plan
+====================================================================================================================*/
+
+.plan_list {
+    border-radius: 15px;
+    background-color: #fff8ea;
+    margin: 0% 12% 5% 12%;
+    padding: 1%;
+}
+
+.plan_title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.plan_title span {
+    color: #f79314;
+    font-size: 2em;
+}
+
+.plan_box {
+    background-color: white;
+    border-radius: 10px;
+    margin: 0% 7px 20px 7px;
+    padding: 1%;
+}
+
+.plan_box_title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.plan_box_title::before {
+    content: "";
+    display: inline-block;
+    background-image: url(img/icon-point.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 22px;
+    height: 22px;
+    margin-top: -5px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.plan_box ul {
+    margin-top: -2%;
+    padding-left: 0%; /*liの先頭の空白を消す*/
+}
+
+.list_style::before {
+    content: "";
+    display: inline-block;
+    padding-top: 7px;
+    width: 7px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background: #f79314;
+}
+
+.plan_box_index {
+    background-color: aliceblue;
+    border-radius: 15px;
+    color: #f79314;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5% 0%;
+    width: 150px;
+}
+
+.plan_contents {
+    margin-bottom: 3%;
+}
+
+.plan_contents::before {
+    content: "";
+    display: inline-block;
+    background-image: url(img/icon-pencil.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-right: 3%;
+}
+
+.plan_text {
+    margin-left: 2%;
+}
+
+.plan_box_period::before {
+    content: "";
+    display: inline-block;
+    background-image: url(img/icon-calender.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-right: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    vertical-align: middle;
+}
+
+.plan_box_apply::before {
+    content: "";
+    display: inline-block;
+    background-image: url(img/icon-condition.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    margin-right: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    vertical-align: middle;
+}
+
+.plan_box_fee::before {
+    content: "";
+    display: inline-block;
+    background-image: url(img/icon-coin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    vertical-align: middle;
+}
+
+.plan_flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.plan_image {
+    width: 48%;
+}
+
+.plan_image img {
+    width: 100%;
+}
+
+.plan_img_title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: -0.5%;
+}
+
+.pricedown {
+    float: left;
+    margin: 2% 3% 1% 1%;
+}
+
+.pricedown_img {
+    width: 100%;
+}
+.pricedown_title {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 1% 0%;
+    text-align: center;
+}
+
+.pricedown_title > br {
+    display: none;
+}
+
+.pricedown_text {
+    margin: 1% 0%;
+}
+
+.pricedown_text span {
+    color: #f79314;
+}
+
+@media screen and (max-width: 767px) {
+    .plan_title {
+        font-size: 16px;
+    }
+    .plan_box_title {
+        font-size: 20px;
+        text-align: center;
+    }
+    .plan_box_index {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .plan_text {
+        text-align: center;
+    }
+    .plan_flex {
+        display: block;
+    }
+    .plan_image {
+        width: auto;
+    }
+    .pricedown {
+        float:none;
+        text-align: center;
+        max-width: 150px;
+        margin: 10px auto;
+    }
+    .pricedown_title {
+        font-size: 20px;
+    }
+    .pricedown_title > br {
+        display: block;
+    }
+    .plan_text.pricedown_text {
+        text-align: left;
+    }
+}
+
+/* ===================================================================================================================
+            Interview
+====================================================================================================================*/
+.Interview{
+    background-color: #f6f6f6;
+    background-image: url(img/bg-section-top-course.png);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: 85% 5%;
+    padding-bottom: 8%;
+}
+
+.interview_box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.interview_img {
+    background-color: #f6f6f6;
+    width: 350px;
+    margin: 0% 4%;
+}
+
+.img_contain {
+    position: relative;
+    border-radius: 15px;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 60%
+}
+
+.img_contain img {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 140%;
+    object-fit: cover;
+}
+
+.interview_text {
+    background-color: #f6f6f6;
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.5em;
+    text-align: justify;
+    margin: 3% auto;
+    width: 100%;
+    
+}
+
+.interview_img:hover img {
+    transform: scale(1.2);
+}
+
+/*.
+interview_img
+.pick-up-contents-list > .pick-up-contents-cassette {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 30%;
+}
+
+img_contain
+.pick-up-contents-media .pick-up-contents-media-thumbnail {
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-top: calc((190/320) * 100%);
+}
+
+img_contain img
+.pick-up-contents-media .pick-up-contents-media-thumbnail > img {
+    width: 100%;
+    height: 145%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+*/
+
+
+
+@media screen and (max-width: 767px) {
+        
+}
+
+
+/* ===================================================================================================================
+            footer
+====================================================================================================================*/
+
+footer {
+    position: relative;
+    padding: 40px 60px 20px;
+    background-color: #f79314;
+}
+
+.to_up {
+    position: absolute;
+    top: -5%;
+    right: 12%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.up_arrow {
+    position: absolute;
+    top: 4%;
+    left: 33%;
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #f79314;
+    border-left: 3px solid #f79314;
+    transform: rotate(45deg);
+}
+
+.footer_flex {
+    display: flex;
+    width: auto;
+}
+.footer_left {
+    order: 1;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.footer_logo {
+    width: 70%;
+}
+
+.address {
+    color: white;
+    font-weight: bold;
+}
+
+.address span {
+    margin: 2% auto;
+}
+
+.llnk_sns a img {
+    display: inline-block;
+    width: 40px;
+    margin: 1px 5px;
+}
+
+.footer_right {
+    order: 2;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.footer_right li {
+    margin-bottom: 6%;
+}
+
+.footer_right li a {
+    font-size: small;
+    color: white;
+}
+
+.footer_right li a span {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 5%;
+}
+
+.footer_character {
+    order: 3;
+    align-self: flex-end;
+    margin-right: 80px;
+}
+
+.potepanda {
+    width: auto;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.copy_writer {
+    padding-top: 50px;
+    color: white;
+    font-size: 10px;
+}
+
+/* cssで　コピーライト*/
+.copy_writer::before {
+    display: inline-block;
+    content: "\00a9";
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.to_up:hover {
+    background-color: #f79314;
+}
+
+.to_up:hover p{
+    border-color: white;
+}
+
+.footer_logo:hover {
+    opacity: 0.5;
+}
+
+.footer_img:hover {
+    opacity: 0.5;
+}
+
+
+@media screen and (max-width: 767px) {
+    footer {
+        padding: 40px 20px 20px;
+    }
+    .to_up {
+        top: -23px;
+    }
+    .footer_flex {
+        display: block;
+    }
+
+    .footer_right {
+        margin: 0 0 20px;
+    }
+    .footer_character {
+        margin: 10px auto;
+        text-align: center;
+    }
+    .footer_character {
+        padding-top: 50px;
+    }
+    .potepanda {
+        height: 70px;
+    }
+    .footer_left {
+        border-top: 2px solid white;
+        margin-top: 40px;
+        padding-top: 40px;
+        text-align: center;
+        width: 90%;
+    }
+    .footer_left a {
+        width: 100%;
+
+    }
+    .footer_logo {
+        width: 70%;
+    }
+    .address > span {
+        display: inline-block;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .llnk_sns a img {
+        display: inline-block;
+        width: 60px;
+        margin: 1px 7px;
+    }
+    .copy_writer {
+        text-align: center;
+    }
+}
