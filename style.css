@@ -209,7 +209,7 @@ li {
 }
 
 .potepan.background-image {
-    background-image: url(img/course-hero-pc.png);
+    background-image: url("img/course-hero-pc.png");
 }
 
 .top_comment.cource {
@@ -224,7 +224,7 @@ li {
 
 @media screen and (max-width: 767px) {
     .potepan.background-image {
-        background-image: url(img/course-hero-sp.png);
+        background-image: url("img/course-hero-sp.png");
     }
     .potepan {
         background-size: contain;
@@ -373,7 +373,7 @@ li {
 
 .detail_text::before {
     content:"";
-    background-image: url(img/icon-finger.png);
+    background-image: url("img/icon-finger.png");
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
@@ -547,7 +547,7 @@ li {
 .plan_box_title::before {
     content: "";
     display: inline-block;
-    background-image: url(img/icon-point.png);
+    background-image: url("img/icon-point.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: 22px;
@@ -589,7 +589,7 @@ li {
 .plan_contents::before {
     content: "";
     display: inline-block;
-    background-image: url(img/icon-pencil.png);
+    background-image: url("img/icon-pencil.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: 16px;
@@ -604,7 +604,7 @@ li {
 .plan_box_period::before {
     content: "";
     display: inline-block;
-    background-image: url(img/icon-calender.png);
+    background-image: url("img/icon-calender.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: 16px;
@@ -618,7 +618,7 @@ li {
 .plan_box_apply::before {
     content: "";
     display: inline-block;
-    background-image: url(img/icon-condition.png);
+    background-image: url("img/icon-condition.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: 16px;
@@ -632,7 +632,7 @@ li {
 .plan_box_fee::before {
     content: "";
     display: inline-block;
-    background-image: url(img/icon-coin.png);
+    background-image: url("img/icon-coin.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 16px;
@@ -732,7 +732,7 @@ li {
 ====================================================================================================================*/
 .Interview{
     background-color: #f6f6f6;
-    background-image: url(img/bg-section-top-course.png);
+    background-image: url("img/bg-section-top-course.png");
     background-repeat: no-repeat;
     background-size: 20%;
     background-position: 85% 5%;
